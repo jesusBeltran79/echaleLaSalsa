@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B8C0B0A3-8A31-C347-3FCB-C70B380C1802" name="PRESENTACION">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:45:10 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Presentacion" id="07870C79-D4CD-8E26-C123-5E11A614B935">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:45:17 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha_Presentacion" id="FF7CE925-C455-8B59-E3C0-925958B2664B">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:45:22 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hora_Inicio" id="96E4F6AD-CC7C-C935-1BBA-EC30C3F4F566">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:45:31 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Duracion" id="7F0B04A6-C4D7-B573-8DC3-D14056843E9F">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:45:40 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Estado" id="CCD5988E-7538-DC44-FFD0-C390755D9855">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:45:45 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Detalles_Produccion" id="ACF27E2A-07E4-9BEB-EF63-078413C916D7">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:45:55 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

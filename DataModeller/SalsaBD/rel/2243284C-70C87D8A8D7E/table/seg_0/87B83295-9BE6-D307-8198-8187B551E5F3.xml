@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="87B83295-9BE6-D307-8198-8187B551E5F3" name="ROL">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:40:48 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Rol" id="0EFB2BB9-B37D-CC35-A126-AEC09F826B61">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:41:17 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Rol" id="4995E5E0-F8D2-0BA6-9022-A88D3D6F2D1D">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:58:09 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Salario" id="54BA4BFE-7948-6484-EC35-C1D9A3283B89">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:41:17 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BBB5A862-26C9-3672-792C-DA1718C61517" name="ROL_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:41:17 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0EFB2BB9-B37D-CC35-A126-AEC09F826B61"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A24C1FC1-FF4B-3CB5-4FE4-9D8A5979BC99" name="ESC_BOL">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:15:43 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<ordsAlias>table_15</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Cupo_Disponible" id="CB799812-3587-C9AB-E351-7F3BAB1D0989">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:16:27 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cupo_Vendido" id="B311BA2B-C729-15CF-ACBB-BD5BE52BE35F">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:16:27 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Evento" id="56143032-89F9-CC79-A93F-39CBDB4D5FE6">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:51:40 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESCENARIOS_ESCENARIOS_ID" id="85C6916D-0F89-5C7A-89D6-F98B198C2A89">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:17:37 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="093E0260-9912-200E-D066-DFFE2A7747E6" referredColumn="A9AA7A11-032E-0FB3-CED5-0EC8938F8D2F"/>
+</associations>
+</Column>
+<Column name="TIPO_BOLETA_ID_Tipo_Boleta" id="74CE548A-F0EF-2397-8D71-853E3ED37E5D">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:20:20 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6F6CBFB8-B88C-B003-C6A1-F3387499B66E" referredColumn="A1CEFBB3-C0C4-F8F0-BA53-8C665FBB8025"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E41E2ED4-98BF-80B1-818C-5BA16503CC35" name="ESC_BOL_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:20:45 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85C6916D-0F89-5C7A-89D6-F98B198C2A89"/>
+<colUsage columnID="74CE548A-F0EF-2397-8D71-853E3ED37E5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D972A4CD-DD6F-5654-21F8-FBDBC58570E7" name="ESC_BOL_ESCENARIOS_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:17:37 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85C6916D-0F89-5C7A-89D6-F98B198C2A89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="50F794A2-0AF9-ACF0-F1EA-398B66F64C3A" name="ESC_BOL_TIPO_BOLETA_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:20:20 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74CE548A-F0EF-2397-8D71-853E3ED37E5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

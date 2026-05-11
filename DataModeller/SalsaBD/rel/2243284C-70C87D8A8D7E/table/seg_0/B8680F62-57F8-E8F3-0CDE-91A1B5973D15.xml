@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B8680F62-57F8-E8F3-0CDE-91A1B5973D15" name="DETALLE_CONTRATO">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:06:19 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Detalle" id="0C0D8A05-A269-8B86-D8A1-840EFF8CAE03">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:07:25 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cachet" id="933AE4CC-15BC-F66C-67E6-068D8A928A13">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:07:25 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Clausula" id="B67009BC-DD9C-6684-33A0-86AC7D30DB17">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:07:25 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTRATO_Numero_Contrato" id="00B4B371-3669-5DFB-2124-75A5088DB263">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:07:32 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="22FF46D1-98E0-046B-562B-5DDDBA2D23C1" referredColumn="EE482171-BFBD-B578-9A02-6DC7A8137E6B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FF43DB26-56AA-1B24-4E9B-3A1709D1D918" name="DETALLE_CONTRATO_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:07:25 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C0D8A05-A269-8B86-D8A1-840EFF8CAE03"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FB526728-29D3-59A6-DD9F-9DB52EABFE99" name="DETALLE_CONTRATO_CONTRATO_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:07:32 UTC</createdTime>
+<generatorID>9EF6F785-57F2-0C73-2248-BF4206EB9F7A</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00B4B371-3669-5DFB-2124-75A5088DB263"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3ABEEC22-2839-F415-7BAB-F910E5517585" containerWithKeyObject="6A1DCE30-E1D9-45BC-5FAA-99729BDBA24A" localFKIndex="E157D7DE-36D7-0277-CEF4-111016AAC22E" name="CONTRATO_ARTISTA_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>DC7E2CB5-5FF5-6D6A-E6A4-5D90A3FB7BF2</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<referredTableLongName>ARTISTA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2D81D426-0B44-1C1B-13DE-6B252CC66635</referredTableID>
+<keyObject>7CF70C5E-C897-35FF-1794-EC42D277F386</keyObject>
+<referredKeyID>7CF70C5E-C897-35FF-1794-EC42D277F386</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Artista</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

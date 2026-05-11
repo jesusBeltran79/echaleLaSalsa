@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DBD5118F-D75F-D928-215B-AECFD8E90473" name="TIPO_BOLETA">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:54:15 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Tipo_Boleta" id="74B05EDE-F58E-9E44-455D-B58E94AC6738">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:54:24 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="E8ADEBF1-0FD1-BBBE-A709-C9D30024ED4B">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:54:25 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Zona" id="BF239054-69EF-944B-D139-A7D077730814">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:54:27 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Precio" id="F9C0DC5B-F64B-380D-8125-24E55FA8864B">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:54:30 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cupo_Disponible" id="A5A5FD5C-093A-ED58-A0F5-BC8D957505F6">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:54:33 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cupo_Vendido" id="650878B5-C01F-B8E1-5051-589809C72365">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:54:35 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ALBERGAR" directorySegmentName="seg_0" id="5D2E801F-CEA2-66BB-1F15-CE64ED17E2A5">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:22:13 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2A1D8627-5772-FC82-B1D6-0FD8DD79DFC7</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B8C0B0A3-8A31-C347-3FCB-C70B380C1802</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

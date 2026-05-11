@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="851D9CCD-54D5-A9AA-C4BF-2D6D65D6D79F" name="CONTRATO ">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:35:30 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Numero_Contrato" id="6F921956-0A27-7FD5-BA7D-157F307BE48C">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:35:41 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cachet" id="CF7D8E3A-4C6E-732D-61F6-585BFA836824">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:37:36 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Estado" id="01D791F7-4FFD-E704-B31F-3EA3714AD1CA">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:37:53 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<constraintName>Ck_Estado_Contrato</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<listOfValues>
+<valueDef value="Cancelado" description=""/>
+<valueDef value="Firmado" description=""/>
+<valueDef value="Pendiente" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha_Firma" id="B8EB6676-5114-205E-CC3D-27DF3F09D657">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:40:45 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha_Vigencia" id="3A21F8DE-E21C-EF2D-8FAD-E33E3B59955A">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:41:10 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha_Fin" id="A50FDC37-E535-C512-ECBC-2623137C69FC">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:41:11 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Detalle_Contrato" id="4149D36E-71E1-1875-51A2-4C8F30FB3531">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:41:49 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Artista" id="5D614978-2D39-FEA8-5DB9-5F5BFAF98AA5">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:21:34 UTC</createdTime>
+<generatorID>DC7E2CB5-5FF5-6D6A-E6A4-5D90A3FB7BF2</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<referedAttribute>86D48158-A5AA-D61F-98EE-60B38106CEE2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9EF6F785-57F2-0C73-2248-BF4206EB9F7A" name="CONTRATO PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 00:37:24 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6F921956-0A27-7FD5-BA7D-157F307BE48C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8A0F35E5-0902-0F1B-D46C-66982206664A" name="REALIZAR">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ARTISTA_ID_Artista" id="AD678B83-B32B-EF51-41AF-AC31E8CD04F2">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A77F29F4-F577-2A10-F9F5-810E84523F70" referredColumn="5A4C5A8A-70F6-DAB6-3E98-0807A908F0BC"/>
+</associations>
+</Column>
+<Column name="PRESENTACION_PRESENTACION_ID" id="B1318577-3C9F-BF85-9A23-3E86A3E9EFC6">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="35123FBF-B609-C51A-C030-2E2E288FEBCB" referredColumn="CEF06467-99D1-46DD-7828-9F0046FA128D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8A2A06D8-D1A0-529A-6217-C429A25C2ADE" name="REALIZAR_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD678B83-B32B-EF51-41AF-AC31E8CD04F2"/>
+<colUsage columnID="B1318577-3C9F-BF85-9A23-3E86A3E9EFC6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AF1C6DDF-4333-DC47-49E0-E0B0F66155B1" name="REALIZAR_ARTISTA_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>8FB9470A-C644-8CFC-5A8F-85211EC30E87</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD678B83-B32B-EF51-41AF-AC31E8CD04F2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1364D1D0-20CF-3187-07A4-526BB0A0257C" name="REALIZAR_PRESENTACION_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>8FB9470A-C644-8CFC-5A8F-85211EC30E87</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1318577-3C9F-BF85-9A23-3E86A3E9EFC6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

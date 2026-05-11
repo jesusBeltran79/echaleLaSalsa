@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FIRMAR " directorySegmentName="seg_0" id="DC7E2CB5-5FF5-6D6A-E6A4-5D90A3FB7BF2">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:21:34 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<engineerTo>
+<item key="2243284C-C85D-9254-F8C9-70C87D8A8D7E" value="true"/>
+</engineerTo>
+<sourcePk>E174850A-6DDB-6157-AA19-08ED4AF216B3</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E63DC5F5-649D-1B70-9757-6B16954542F0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>851D9CCD-54D5-A9AA-C4BF-2D6D65D6D79F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

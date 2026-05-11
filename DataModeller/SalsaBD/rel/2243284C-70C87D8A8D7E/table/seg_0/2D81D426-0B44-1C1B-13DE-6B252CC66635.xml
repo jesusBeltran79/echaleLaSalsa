@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2D81D426-0B44-1C1B-13DE-6B252CC66635" name="ARTISTA">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>E63DC5F5-649D-1B70-9757-6B16954542F0</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Artista" id="5A4C5A8A-70F6-DAB6-3E98-0807A908F0BC">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>86D48158-A5AA-D61F-98EE-60B38106CEE2</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre_Artistico" id="542BB91A-8D55-6AE2-CE63-FB655A46A093">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>A150E404-0F5A-601B-F2CB-336E31650876</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Genero" id="43837525-076A-DB39-E6D4-204276199138">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>BE4498C1-A633-D662-C494-6FF576641254</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Num_Integrantes" id="6E0DBF26-B95C-D3C9-B127-338497226E6F">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>3EDE72BF-2150-3E57-D466-5236AAB23EF4</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO_ID_Usuario" id="A3DD266D-157F-79BA-9D36-B51534DED766">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:54:37 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8EE21E99-47D5-6B6E-3470-6644B58E0B68" referredColumn="D72245FE-41F8-1646-68F9-11217F58C0A0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7CF70C5E-C897-35FF-1794-EC42D277F386" name="ARTISTA_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>E174850A-6DDB-6157-AA19-08ED4AF216B3</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5A4C5A8A-70F6-DAB6-3E98-0807A908F0BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A28A873D-D28B-D73E-B40C-E1FCD7BD5314" name="ARTISTA_USUARIO_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:54:37 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3DD266D-157F-79BA-9D36-B51534DED766"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

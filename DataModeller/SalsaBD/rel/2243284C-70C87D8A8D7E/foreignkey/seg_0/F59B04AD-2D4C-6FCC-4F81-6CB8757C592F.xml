@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F59B04AD-2D4C-6FCC-4F81-6CB8757C592F" containerWithKeyObject="EC477F8B-DA0E-091E-A434-C3ED32F3174B" localFKIndex="101CE7A1-C9B6-ED73-9C6D-AF6E814BFAF5" name="PRESENTACION_ESCENARIOS_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>5D2E801F-CEA2-66BB-1F15-CE64ED17E2A5</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<referredTableLongName>ESCENARIOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E59C0437-CBFF-BC5C-54E5-87501F6E9432</referredTableID>
+<keyObject>A80FA4CA-2E05-C5BC-FB23-16B462E70E4A</keyObject>
+<referredKeyID>A80FA4CA-2E05-C5BC-FB23-16B462E70E4A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ESCENARIOS_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

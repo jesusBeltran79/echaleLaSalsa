@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F681D53A-F31A-BC14-16FF-60B74F118825" name="BOLETA">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>DBD5118F-D75F-D928-215B-AECFD8E90473</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<ordsAlias>tipo_boleta</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BOLETA_ID" id="6974B443-A766-1C08-894C-868DAE6038CE">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="Codigo" id="72444362-D0EF-30A2-6110-7756C6525B9C">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:11:58 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Emision" id="82A192EC-0574-ADB2-F948-C218B9B7A9E0">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:11:58 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Estado" id="A8AA330A-9810-5FD7-2AE1-E0D6A2710D33">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:11:58 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_BOLETA_ID_Tipo_Boleta" id="A20E3181-A554-DD60-B2EA-DC9A0A8FE1EF">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:15:00 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2AFF8CDE-3C66-4565-C296-CA99F2FF3011" referredColumn="A1CEFBB3-C0C4-F8F0-BA53-8C665FBB8025"/>
+</associations>
+</Column>
+<Column name="VENTA_ID_Venta" id="53FB1BD8-4E22-2B55-E4F1-01D9CF98E571">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:36:44 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="581836F6-DEFD-C0F8-F1A3-DFF6C2DBFBF3" referredColumn="4F17AE6D-7F6A-2AEE-D411-9ECDE5AABA21"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="078B3E35-8B7B-CC60-6717-0A8C9F8ACD41" name="TIPO_BOLETA_PKv1">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="6974B443-A766-1C08-894C-868DAE6038CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1E57CAFD-D40D-B5C9-83B6-0CC8C6DC54A1" name="BOLETA_TIPO_BOLETA_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:15:00 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A20E3181-A554-DD60-B2EA-DC9A0A8FE1EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BFAFF566-0115-50C5-6BC3-02BBB977F034" name="BOLETA_VENTA_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:49:37 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53FB1BD8-4E22-2B55-E4F1-01D9CF98E571"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

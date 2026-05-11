@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3B44C885-8637-CCC1-37B1-F4063B359235" name="STAFF">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>A2A38BC1-A14D-21B1-31AD-ABF7417F2273</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Staff" id="97B0E4E9-F137-C137-A70D-6158F4B05C2A">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>EF379282-BCA2-90CD-E216-D98FF4C5B814</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Inicio" id="237F276A-616B-256B-FD2F-FE4BA9544366">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:58:57 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO_ID_Usuario" id="8BC24C30-A990-A474-82B6-F5E83B9046C0">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:56:04 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="111851D7-B4F7-C05E-D65A-B553BB83B2D5" referredColumn="D72245FE-41F8-1646-68F9-11217F58C0A0"/>
+</associations>
+</Column>
+<Column name="ROL_ID_Rol" id="6A17D08A-2405-5596-A062-FEA1B7DEFFAA">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:59:33 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8AE33430-8B3F-2B6D-AB40-E2DB62889552" referredColumn="0EFB2BB9-B37D-CC35-A126-AEC09F826B61"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E0789616-0807-F791-7C30-F79E212B2B62" name="STAFF_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:59:27 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97B0E4E9-F137-C137-A70D-6158F4B05C2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1BA457CA-1C36-329B-7D69-FE4892BD7226" name="STAFF_USUARIO_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:56:04 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8BC24C30-A990-A474-82B6-F5E83B9046C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2D4928AD-4562-4F79-AE4D-AA0BFE96F6E3" name="STAFF_ROL_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:59:33 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A17D08A-2405-5596-A062-FEA1B7DEFFAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

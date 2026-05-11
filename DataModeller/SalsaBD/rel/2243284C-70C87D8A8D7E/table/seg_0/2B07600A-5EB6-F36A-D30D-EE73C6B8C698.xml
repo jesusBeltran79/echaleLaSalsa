@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2B07600A-5EB6-F36A-D30D-EE73C6B8C698" name="VENTA">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>8E9B2F67-F126-0A19-6FDE-86A822732214</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Venta" id="4F17AE6D-7F6A-2AEE-D411-9ECDE5AABA21">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>7BD83ED4-A4C8-CA70-3EEF-99433CA0469B</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Hora_Venta" id="C6A26BF7-B2F8-B0AB-73AE-44BF592A8DB0">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>B905D341-EC42-F63C-AC24-290DD0342739</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cantidad" id="1051BCE4-336C-5902-A3D4-2A2B59D82A81">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>BD68B4BF-D85E-40FB-2F4C-4A68C4C743C9</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Total" id="8D00386C-8CAE-8056-BC90-CCCFE15DFD0C">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>C9DE4F5F-2AAE-E716-A9F0-3EC945593154</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Estado" id="527D7B8C-0E14-1094-7590-1274C140F258">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>24331A6C-CEDE-FF13-1316-B09EB1251F0E</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ASISTENTE_ASISTENTE_ID" id="43649DC1-C01D-613F-1596-0B46CE588825">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5E889178-D593-4549-CDBE-186FBE301498" referredColumn="F3E60D67-9930-14AA-1A94-B83F7B0CD93F"/>
+</associations>
+</Column>
+<Column name="METODO_PAGO_ID_Metodo_Pago" id="B5C9A64D-AF04-FAFD-6391-D2814E78EE97">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:25:06 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1D81A260-1C18-21A6-D978-DE540E0939D6" referredColumn="0438D151-9E1D-75D5-27CC-913EDAB704D5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AC668414-FB57-1994-129A-2FB7ED4FD2DE" name="VENTA_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:22:04 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F17AE6D-7F6A-2AEE-D411-9ECDE5AABA21"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ECF47CF3-C88D-145C-F317-50900E6EF5BA" name="VENTA_ASISTENTE_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>41C41C5E-36B7-86FE-00FD-FB20DB26D6CA</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43649DC1-C01D-613F-1596-0B46CE588825"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="574E7433-09F0-E14D-5956-769CE3DBB127" name="VENTA_METODO_PAGO_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:25:06 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5C9A64D-AF04-FAFD-6391-D2814E78EE97"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

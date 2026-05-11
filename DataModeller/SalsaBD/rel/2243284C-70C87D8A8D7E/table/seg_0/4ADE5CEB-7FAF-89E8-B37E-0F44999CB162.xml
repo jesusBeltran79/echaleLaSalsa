@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4ADE5CEB-7FAF-89E8-B37E-0F44999CB162" name="PAIS">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:39:40 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Codigo_ISO" id="1BC80529-9F04-6A65-6522-3649C6766CD7">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:40:08 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="D48C8035-CA87-2EE9-4E55-EC51E996FCF8">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:40:27 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Moneda" id="6F499E0E-8EEB-33C2-022C-9B7CE63ED9D9">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:40:27 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A5374BF5-3FCF-22A1-8801-4E96F5532C49" name="PAIS_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:40:08 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1BC80529-9F04-6A65-6522-3649C6766CD7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

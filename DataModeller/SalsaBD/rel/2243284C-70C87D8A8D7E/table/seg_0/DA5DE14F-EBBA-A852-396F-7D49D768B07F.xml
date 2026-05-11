@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DA5DE14F-EBBA-A852-396F-7D49D768B07F" name="USUARIO">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:42:20 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Usuario" id="D72245FE-41F8-1646-68F9-11217F58C0A0">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:43:34 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="96534337-E8FB-36FC-C4D2-80648E6A23C3">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:43:34 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apellido" id="F1AD1861-32E2-8BB1-CD87-DC11BF353F0F">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:43:34 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Email" id="E84C63C7-0087-2758-65E5-65DE329A8BF4">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:43:34 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telefono" id="74AA1E3C-7C3D-77AB-5BA7-1CBA92F4982F">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:43:34 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ciudad" id="DE8B64FD-9EF3-4D02-DA09-D05FEFD9FF2D">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:43:34 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre_Usuario" id="635292A2-267B-1B16-1F7B-D4AB2789FFC1">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:43:34 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Contrasena" id="DF089457-36FD-45A1-43F9-0DB7BD417457">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:43:34 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Registro" id="1ABEC911-5237-2A69-D0E9-65543220DE1E">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:43:34 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAIS_Codigo_ISO" id="D86EDBA1-FF9E-98F0-9B34-DF31542595EB">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:49:48 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7279946A-745C-FB20-8162-3F5C5676AF3F" referredColumn="1BC80529-9F04-6A65-6522-3649C6766CD7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="38CF017A-C7B7-9F99-ECC6-FD4640D2C16A" name="USUARIO_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:43:46 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D72245FE-41F8-1646-68F9-11217F58C0A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F2DDF204-A62A-9A60-3A54-6AD11F6CD465" name="USUARIO_PAIS_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:49:48 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D86EDBA1-FF9E-98F0-9B34-DF31542595EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

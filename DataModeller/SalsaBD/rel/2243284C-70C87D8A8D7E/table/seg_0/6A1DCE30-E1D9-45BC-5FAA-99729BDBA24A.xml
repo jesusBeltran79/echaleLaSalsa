@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6A1DCE30-E1D9-45BC-5FAA-99729BDBA24A" name="CONTRATO">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>851D9CCD-54D5-A9AA-C4BF-2D6D65D6D79F</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Numero_Contrato" id="EE482171-BFBD-B578-9A02-6DC7A8137E6B">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>6F921956-0A27-7FD5-BA7D-157F307BE48C</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Estado" id="C0D8D93F-1BAE-867E-C03D-895A3DB997DB">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>01D791F7-4FFD-E704-B31F-3EA3714AD1CA</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<constraintName>Ck_Estado_Contrato</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<listOfValues>
+<valueDef value="Cancelado" description=""/>
+<valueDef value="Firmado" description=""/>
+<valueDef value="Pendiente" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Firma" id="21BC9FDA-5CE2-5992-AEB5-F59358711255">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>B8EB6676-5114-205E-CC3D-27DF3F09D657</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Vigencia" id="9F40B1BA-FAFA-4EAD-7487-712B99EE690B">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>3A21F8DE-E21C-EF2D-8FAD-E33E3B59955A</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha_Fin" id="9088D8A4-1F3E-84BC-936C-8480B9F13C98">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>A50FDC37-E535-C512-ECBC-2623137C69FC</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ARTISTA_ID_Artista" id="37E2BD60-66F8-7396-CD3F-759DB30E4A8D">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>5D614978-2D39-FEA8-5DB9-5F5BFAF98AA5</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3ABEEC22-2839-F415-7BAB-F910E5517585" referredColumn="5A4C5A8A-70F6-DAB6-3E98-0807A908F0BC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0875091F-EC35-59D2-FC75-90194F3C3A6F" name="CONTRATO_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>9EF6F785-57F2-0C73-2248-BF4206EB9F7A</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE482171-BFBD-B578-9A02-6DC7A8137E6B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E157D7DE-36D7-0277-CEF4-111016AAC22E" name="CONTRATO_ARTISTA_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>DC7E2CB5-5FF5-6D6A-E6A4-5D90A3FB7BF2</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37E2BD60-66F8-7396-CD3F-759DB30E4A8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

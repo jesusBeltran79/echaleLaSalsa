@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="25A7052B-7D1D-826F-BCA3-87446926F0D3" name="METODO_PAGO">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:24:13 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<ordsAlias>table_16</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Metodo_Pago" id="0438D151-9E1D-75D5-27CC-913EDAB704D5">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:24:52 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="DEDABE1B-6EEA-C5F7-8DA6-DF128D4382C9">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:24:52 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Activo" id="3DDD0A9E-EFA1-6E73-8890-93D9D96926A0">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:52:14 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="78760D9B-B45E-CED2-6EA3-B277AF3EBFCC" name="METODO_PAGO_PK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 03:24:52 UTC</createdTime>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0438D151-9E1D-75D5-27CC-913EDAB704D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

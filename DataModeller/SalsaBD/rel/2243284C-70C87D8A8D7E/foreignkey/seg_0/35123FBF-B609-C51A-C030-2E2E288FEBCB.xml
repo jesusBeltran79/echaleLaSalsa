@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="35123FBF-B609-C51A-C030-2E2E288FEBCB" containerWithKeyObject="8A0F35E5-0902-0F1B-D46C-66982206664A" localFKIndex="1364D1D0-20CF-3187-07A4-526BB0A0257C" name="REALIZAR_PRESENTACION_FK">
+<createdBy>User</createdBy>
+<createdTime>2026-05-11 02:29:26 UTC</createdTime>
+<generatorID>8FB9470A-C644-8CFC-5A8F-85211EC30E87</generatorID>
+<ownerDesignName>SalsaBD</ownerDesignName>
+<referredTableLongName>PRESENTACION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EC477F8B-DA0E-091E-A434-C3ED32F3174B</referredTableID>
+<keyObject>C054B621-F7D5-0A46-0DA0-92261DFCAA3C</keyObject>
+<referredKeyID>C054B621-F7D5-0A46-0DA0-92261DFCAA3C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>PRESENTACION_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
