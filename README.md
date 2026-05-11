@@ -42,7 +42,7 @@ Copia todo el contenido de este archivo, pégalo en el SQL Editor de Neon y haz 
 
 **2. datos_prueba.sql**
 
-Copia y pega el contenido de este archivo en el SQL Editor y ejecútalo. Inserta 383 registros distribuidos en todas las tablas, incluyendo los 12 artistas principales del festival, 35 asistentes, 40 ventas y 60 boletas.
+Copia y pega el contenido de este archivo en el SQL Editor y ejecútalo. Inserta 383 registros distribuidos en todas las tablas, incluyendo los 30 artistas principales del festival, 35 asistentes, 40 ventas y 60 boletas.
 
 **3. triggers.sql**
 
