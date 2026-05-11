@@ -44,19 +44,15 @@ Copia todo el contenido de este archivo, pégalo en el SQL Editor de Neon y haz 
 
 Copia y pega el contenido de este archivo en el SQL Editor y ejecútalo. Inserta 383 registros distribuidos en todas las tablas, incluyendo los 12 artistas principales del festival, 35 asistentes, 40 ventas y 60 boletas.
 
-**3. artistas_adicionales.sql**
-
-Copia y pega el contenido de este archivo y ejecútalo. Agrega 18 artistas mas para completar los 30 requeridos, incluyendo a Victor Manuelle, Eddie Santiago, Willie Colon, India, entre otros.
-
-**4. triggers.sql**
+**3. triggers.sql**
 
 Copia y pega el contenido de este archivo y ejecútalo. Crea los 4 triggers del sistema y también genera automáticamente la tabla de auditoría que usa uno de ellos.
 
-**5. procedimientos.sql**
+**4. procedimientos.sql**
 
 Copia y pega el contenido de este archivo y ejecútalo. Crea los 3 procedimientos almacenados del sistema.
 
-**6. consultas.sql**
+**5. consultas.sql**
 
 Este archivo contiene las 3 consultas analíticas del proyecto. A diferencia de los anteriores, no necesitas ejecutarlas todas juntas. Puedes copiar cada consulta por separado en el SQL Editor y ejecutarlas individualmente para ver los resultados.
 
