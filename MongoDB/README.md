@@ -50,4 +50,3 @@ load("consultas.js")
 - No ejecutar consultas antes de insertar datos.
 - Algunas consultas dependen de documentos previamente cargados.
 
-========================================
