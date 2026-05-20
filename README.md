@@ -38,19 +38,26 @@ El orden correcto es el siguiente:
 
 **1. creacion_tablas.sql**
 
-Copia todo el contenido de este archivo, pégalo en el SQL Editor de Neon y haz clic en el botón Run. Este script crea las 17 tablas del sistema con todas sus restricciones, llaves foráneas e índices. También incluye un bloque DROP TABLE al inicio, lo que significa que puedes ejecutarlo cuantas veces quieras para empezar desde cero sin errores.
+Copia todo el contenido de este archivo, pégalo en el SQL Editor de Neon y haz clic en el botón Run. Este script crea las 16 tablas del sistema con todas sus restricciones, llaves foráneas e índices. En caso de no ser tu primera vez ejecutando este script te sugerimos hacer DROP a todas las tablas:
 
-**2. datos_prueba.sql**
+```sql
+DROP SCHEMA public CASCADE;
+-- Después ejecuta lo siguiente antes de ejecutar la creación de las tablas:
+CREATE SCHEMA "public"
+```
 
-Copia y pega el contenido de este archivo en el SQL Editor y ejecútalo. Inserta 383 registros distribuidos en todas las tablas, incluyendo los 30 artistas principales del festival, 35 asistentes, 40 ventas y 60 boletas.
 
-**3. triggers.sql**
+**2. triggers.sql**
 
 Copia y pega el contenido de este archivo y ejecútalo. Crea los 4 triggers del sistema y también genera automáticamente la tabla de auditoría que usa uno de ellos.
 
-**4. procedimientos.sql**
+**3. procedimientos.sql**
 
-Copia y pega el contenido de este archivo y ejecútalo. Crea los 3 procedimientos almacenados del sistema.
+Copia y pega el contenido de este archivo y ejecútalo. Crea los 2 procedimientos almacenados del sistema.
+
+**4. datos_prueba.sql**
+
+Copia y pega el contenido de este archivo en el SQL Editor y ejecútalo. Inserta registros distribuidos en todas las tablas, incluyendo los 12 artistas principales del festival, 35 asistentes, 40 ventas y 40 boletas.
 
 **5. consultas.sql**
 
@@ -69,7 +76,7 @@ SELECT table_name
  WHERE table_schema = 'public'
  ORDER BY table_name;
 ```
-Deberías ver 18 tablas en la lista (17 del modelo mas la tabla de auditoría que crea el trigger).
+Deberías ver 16 tablas en la lista (17 del modelo mas la tabla de auditoría que crea el trigger).
 
 ```sql
 -- Verificar conteo de registros en las tablas principales
@@ -79,7 +86,7 @@ SELECT 'presentacion',          COUNT(*)              FROM presentacion  UNION A
 SELECT 'venta',                 COUNT(*)              FROM venta         UNION ALL
 SELECT 'boleta',                COUNT(*)              FROM boleta;
 ```
-Deberías ver: 30 · 35 · 24 · 40 · 60.
+Deberías ver: 30 · 35 · 24 · 40 · 40.
 
 ---
 
@@ -96,11 +103,6 @@ SELECT * FROM sp_reporte_ventas_por_dia_escenario('2026-10-17');
 
 -- Liquidación de pagos a artistas
 SELECT * FROM sp_pagos_artistas();
-
--- Registrar una venta nueva (asistente 1, boleta VIP Día, pago con Nequi, 2 unidades)
-SELECT * FROM sp_registrar_venta(1, 2, 5, 2);
-```
----
 
 ## Solución a errores frecuentes
 
