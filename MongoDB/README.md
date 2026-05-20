@@ -1,13 +1,14 @@
-========================================
-AVANCE 2 ¡Échale Salsita! 2026
-========================================
+
+# AVANCE 2 ¡Échale Salsita! 2026
+---
 
 Este avance contiene la informacion necesaria
 para la creación, carga y consulta de datos
 en MongoDB.
 
-ORDEN DE EJECUCIÓN
-(IMPORTANTE EJECUTAR EN ESTE ORDEN)
+---
+## ORDEN DE EJECUCIÓN
+### (IMPORTANTE EJECUTAR EN ESTE ORDEN)
 
 1. creacion_colecciones.js
    - Crea la base de datos
@@ -21,9 +22,9 @@ ORDEN DE EJECUCIÓN
 3. consultas.js
    - Ejecuta consultas de prueba
    - Realiza búsquedas, agregaciones y validaciones
-========================================
-REQUISITOS
-========================================
+
+---
+## REQUISITOS
 
 - MongoDB instalado
 o
@@ -33,9 +34,8 @@ Herramientas recomendadas:
 - MongoDB Compass
 - Mongo Shell (mongosh)
 
-========================================
-EJECUCIÓN EN MONGOSH
-========================================
+---
+## EJECUCIÓN EN MONGOSH
 
 use echale_salsita
 
@@ -43,9 +43,8 @@ load("creacion_colecciones.js")
 load("datos_prueba.js")
 load("consultas.js")
 
-========================================
-NOTAS
-========================================
+---
+## NOTAS
 
 - Ejecutar primero la creación de colecciones.
 - No ejecutar consultas antes de insertar datos.
