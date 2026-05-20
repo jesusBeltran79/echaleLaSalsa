@@ -1,4 +1,4 @@
-README.txt
+README.md
 
 ========================================
 AVANCE 2 ¡Échale Salsita! 2026
