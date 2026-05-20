@@ -1,48 +1,49 @@
-
-
 -- CONSULTA 1: Programación completa del festival con artistas, escenario, horario y cachet 
 -- por presentación
 
-
 SELECT
-    e.nombre                                        AS escenario,
-    p.fecha_presentacion                            AS fecha,
+    e.nombre                     AS escenario,
+    p.fecha_presentacion         AS fecha,
     p.hora_inicio,
     p.hora_fin,
-    a.nombre_artistico                              AS artista,
+    
+    a.nombre_artistico           AS artista,
     r.rol_en_show,
-    u.ciudad                                        AS ciudad_origen,
-    pai.nombre                                      AS pais,
-    p.estado                                        AS estado_presentacion,
-    (
-        SELECT dc.cachet
-          FROM contrato    c
-          JOIN detalle_contrato dc ON dc.contrato_id = c.numero_contrato
-         WHERE c.artista_id = a.id_artista
-           AND c.estado     = 'activo'
-         LIMIT 1
-    )                                               AS cachet,
-    (
-        SELECT pai2.moneda
-          FROM contrato c2
-          JOIN usuario  u2  ON u2.id_usuario  = a.usuario_id
-          JOIN pais     pai2 ON pai2.codigo_iso = u2.pais_codigo_iso
-         WHERE c2.artista_id = a.id_artista
-         LIMIT 1
-    )                                               AS moneda_cachet
+    
+    u.ciudad                     AS ciudad_origen,
+    pai.nombre                   AS pais,
+    
+    p.estado                     AS estado_presentacion,
+    
+    c.cachet,
+    c.moneda                     AS moneda_cachet
 
-FROM presentacion  p
-JOIN realizar r   ON r.presentacion_id = p.id_presentacion
-JOIN artista a   ON a.id_artista = r.artista_id
-JOIN usuario u   ON u.id_usuario = a.usuario_id
-JOIN pais pai ON pai.codigo_iso = u.pais_codigo_iso
-JOIN escenarios e   ON e.id_escenario = p.escenario_id
+FROM presentacion p
+
+JOIN realizar r
+    ON r.presentacion_id = p.id_presentacion
+
+JOIN artista a
+    ON a.id_artista = r.artista_id
+
+JOIN usuario u
+    ON u.id_usuario = a.usuario_id
+
+JOIN pais pai
+    ON pai.codigo_iso = u.pais_codigo_iso
+
+JOIN escenarios e
+    ON e.id_escenario = p.escenario_id
+
+LEFT JOIN contrato c
+    ON c.artista_id = a.id_artista
+   AND c.estado = 'activo'
 
 ORDER BY
     e.nombre,
     p.fecha_presentacion,
     p.hora_inicio,
-    r.rol_en_show DESC;   
+    r.rol_en_show DESC;
 
 -- CONSULTA 2: Ranking de asistentes por gasto total,
 -- con detalle de boletas y métodos de pago usados
