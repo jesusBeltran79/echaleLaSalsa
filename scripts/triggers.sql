@@ -1,48 +1,65 @@
--- TRIGGER 1: Actualizar cupo_vendido en esc_bol al insertar o anular una boleta            
+-- TRIGGER 1: Actualizar cupo_vendido en esc_bol al insertar o anular una boleta 
+
 CREATE OR REPLACE FUNCTION fn_actualizar_cupo()
 RETURNS TRIGGER AS $$
-DECLARE
-    v_escenario_id  INTEGER;
-    v_fecha_evento  DATE;
 BEGIN
-       SELECT eb.escenario_id, eb.fecha_evento
-      INTO v_escenario_id, v_fecha_evento
-      FROM esc_bol eb
-     WHERE eb.tipo_boleta_id = NEW.tipo_boleta_id
-     ORDER BY eb.fecha_evento ASC
-     LIMIT 1;
 
-    IF NOT FOUND THEN
-        RAISE EXCEPTION
-            'No existe configuración de cupo para tipo_boleta_id = %',
-            NEW.tipo_boleta_id;
-    END IF;
-
+    -- Insertar boleta
     IF TG_OP = 'INSERT' THEN
-        IF (SELECT cupo_disponible - cupo_vendido
+
+        -- Verificar existencia del cupo
+        IF NOT EXISTS (
+            SELECT 1
               FROM esc_bol
-             WHERE escenario_id   = v_escenario_id
+             WHERE escenario_id   = NEW.escenario_id
                AND tipo_boleta_id = NEW.tipo_boleta_id
-               AND fecha_evento   = v_fecha_evento) < 1 THEN
+               AND fecha_evento   = NEW.fecha_evento
+        ) THEN
             RAISE EXCEPTION
-                'Cupo agotado para el tipo de boleta % en el escenario % el %',
-                NEW.tipo_boleta_id, v_escenario_id, v_fecha_evento;
+                'No existe configuración de cupo para escenario %, tipo %, fecha %',
+                NEW.escenario_id,
+                NEW.tipo_boleta_id,
+                NEW.fecha_evento;
         END IF;
 
+        -- Verificar disponibilidad
+        IF (
+            SELECT cupo_disponible - cupo_vendido
+              FROM esc_bol
+             WHERE escenario_id   = NEW.escenario_id
+               AND tipo_boleta_id = NEW.tipo_boleta_id
+               AND fecha_evento   = NEW.fecha_evento
+        ) < 1 THEN
+            RAISE EXCEPTION
+                'Cupo agotado para escenario %, tipo %, fecha %',
+                NEW.escenario_id,
+                NEW.tipo_boleta_id,
+                NEW.fecha_evento;
+        END IF;
+
+        -- Descontar cupo
         UPDATE esc_bol
            SET cupo_vendido = cupo_vendido + 1
-         WHERE escenario_id   = v_escenario_id
+         WHERE escenario_id   = NEW.escenario_id
            AND tipo_boleta_id = NEW.tipo_boleta_id
-           AND fecha_evento   = v_fecha_evento;
+           AND fecha_evento   = NEW.fecha_evento;
 
-    ELSIF TG_OP = 'UPDATE' THEN
-        IF OLD.estado <> 'anulada' AND NEW.estado = 'anulada' THEN
+    END IF;
+
+    -- Anular boleta
+    IF TG_OP = 'UPDATE' THEN
+
+        IF OLD.estado <> 'anulada'
+           AND NEW.estado = 'anulada' THEN
+
             UPDATE esc_bol
                SET cupo_vendido = GREATEST(cupo_vendido - 1, 0)
-             WHERE escenario_id   = v_escenario_id
+             WHERE escenario_id   = NEW.escenario_id
                AND tipo_boleta_id = NEW.tipo_boleta_id
-               AND fecha_evento   = v_fecha_evento;
+               AND fecha_evento   = NEW.fecha_evento;
+
         END IF;
+
     END IF;
 
     RETURN NEW;
@@ -166,33 +183,39 @@ CREATE TRIGGER trg_validar_metodo_pago
 
 -- TRIGGER 4: Calcular automáticamente el total de la venta
 
-CREATE OR REPLACE FUNCTION fn_calcular_total_venta()
+CREATE OR REPLACE FUNCTION fn_actualizar_total_venta()
 RETURNS TRIGGER AS $$
 DECLARE
-    v_precio   NUMERIC(12,2);
+    v_precio NUMERIC(12,2);
 BEGIN
-        SELECT tb.precio
-      INTO v_precio
-      FROM tipo_boleta tb
-     WHERE tb.id_tipo_boleta = (
-                SELECT id_tipo_boleta
-           FROM tipo_boleta
-          ORDER BY id_tipo_boleta ASC
-          LIMIT 1
-     );
 
-        IF v_precio IS NOT NULL THEN
-        NEW.total := v_precio * NEW.cantidad;
+    -- Obtener precio REAL de la boleta comprada
+    SELECT precio
+      INTO v_precio
+      FROM tipo_boleta
+     WHERE id_tipo_boleta = NEW.tipo_boleta_id;
+
+    IF NOT FOUND THEN
+        RAISE EXCEPTION
+            'No existe el tipo de boleta %',
+            NEW.tipo_boleta_id;
+    END IF;
+
+    -- Sumar al total de la venta
+    IF NEW.estado = 'activa' THEN
+
+        UPDATE venta
+        SET total = total + v_precio
+        WHERE id_venta = NEW.venta_id;
+
     END IF;
 
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
 
-
-CREATE TRIGGER trg_calcular_total
-    BEFORE INSERT
-    ON venta
-    FOR EACH ROW
-    EXECUTE FUNCTION fn_calcular_total_venta();
-
+CREATE TRIGGER trg_actualizar_total_venta
+AFTER INSERT
+ON boleta
+FOR EACH ROW
+EXECUTE FUNCTION fn_actualizar_total_venta();
