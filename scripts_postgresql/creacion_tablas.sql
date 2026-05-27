@@ -17,17 +17,16 @@ CREATE TABLE "asistente" (
 	CONSTRAINT "asistente_pk" PRIMARY KEY("id_asistente"),
 	CONSTRAINT "asistente_tdoc_chk" CHECK (((tipo_documento)::text = ANY (ARRAY[('CC'::character varying)::text, ('CE'::character varying)::text, ('PA'::character varying)::text, ('TI'::character varying)::text, ('NIT'::character varying)::text])))
 );
-CREATE TABLE "esc_bol" (
-	"escenario_id" integer,
-	"tipo_boleta_id" integer,
-	"cupo_disponible" integer NOT NULL,
-	"cupo_vendido" integer DEFAULT 0 NOT NULL,
-	"fecha_evento" date,
-	CONSTRAINT "esc_bol_pk" PRIMARY KEY("escenario_id","tipo_boleta_id","fecha_evento"),
-	CONSTRAINT "esc_bol_cupo_disponible_check" CHECK ((cupo_disponible > 0)),
-	CONSTRAINT "esc_bol_cupo_vendido_check" CHECK ((cupo_vendido >= 0)),
-	CONSTRAINT "esc_bol_cupos_chk" CHECK ((cupo_vendido <= cupo_disponible)),
-	CONSTRAINT "esc_bol_fecha_chk" CHECK ((fecha_evento = ANY (ARRAY['2026-10-17'::date, '2026-10-18'::date])))
+CREATE TABLE "auditoria_presentacion" (
+	"id_auditoria" serial,
+	"presentacion_id" integer NOT NULL,
+	"campo_modificado" varchar(50) NOT NULL,
+	"valor_anterior" text,
+	"valor_nuevo" text,
+	"usuario_db" varchar(100) DEFAULT CURRENT_USER NOT NULL,
+	"fecha_cambio" timestamp DEFAULT now() NOT NULL,
+	"operacion" varchar(10) NOT NULL,
+	CONSTRAINT "auditoria_presentacion_pk" PRIMARY KEY("id_auditoria")
 );
 CREATE TABLE "boleta" (
 	"id_boleta" serial,
@@ -39,8 +38,7 @@ CREATE TABLE "boleta" (
 	"fecha_emision" timestamp DEFAULT now() NOT NULL,
 	"estado" varchar(10) DEFAULT 'activa' NOT NULL,
 	CONSTRAINT "boleta_pk" PRIMARY KEY("id_boleta"),
-	CONSTRAINT "boleta_estado_chk" CHECK (((estado)::text = ANY (ARRAY[('activa'::character varying)::text, ('usada'::character varying)::text, ('anulada'::character varying)::text]))),
-	CONSTRAINT "boleta_esc_bol_fk" FOREIGN KEY ("escenario_id", "tipo_boleta_id", "fecha_evento") REFERENCES "esc_bol"("escenario_id", "tipo_boleta_id", "fecha_evento")
+	CONSTRAINT "boleta_estado_chk" CHECK (((estado)::text = ANY (ARRAY[('activa'::character varying)::text, ('usada'::character varying)::text, ('anulada'::character varying)::text])))
 );
 CREATE TABLE "contrato" (
 	"numero_contrato" serial,
@@ -53,10 +51,22 @@ CREATE TABLE "contrato" (
 	"fecha_vigencia" timestamp NOT NULL,
 	"fecha_fin" timestamp NOT NULL,
 	CONSTRAINT "contrato_pk" PRIMARY KEY("numero_contrato"),
+	CONSTRAINT "contrato_cachet_check" CHECK ((cachet > (0)::numeric)),
 	CONSTRAINT "contrato_estado_chk" CHECK (((estado)::text = ANY (ARRAY[('activo'::character varying)::text, ('cumplido'::character varying)::text, ('cancelado'::character varying)::text, ('en_revision'::character varying)::text]))),
 	CONSTRAINT "contrato_fechas_chk" CHECK ((fecha_fin > fecha_vigencia)),
-	CONSTRAINT "contrato_cachet_check" CHECK ((cachet > (0)::numeric)),
-	CONSTRAINT "contrato_moneda_chk" CHECK (moneda IN ('COP', 'USD'))
+	CONSTRAINT "contrato_moneda_chk" CHECK (((moneda)::text = ANY ((ARRAY['COP'::character varying, 'USD'::character varying])::text[])))
+);
+CREATE TABLE "esc_bol" (
+	"escenario_id" integer,
+	"tipo_boleta_id" integer,
+	"cupo_disponible" integer NOT NULL,
+	"cupo_vendido" integer DEFAULT 0 NOT NULL,
+	"fecha_evento" date,
+	CONSTRAINT "esc_bol_pk" PRIMARY KEY("escenario_id","tipo_boleta_id","fecha_evento"),
+	CONSTRAINT "esc_bol_cupo_disponible_check" CHECK ((cupo_disponible > 0)),
+	CONSTRAINT "esc_bol_cupo_vendido_check" CHECK ((cupo_vendido >= 0)),
+	CONSTRAINT "esc_bol_cupos_chk" CHECK ((cupo_vendido <= cupo_disponible)),
+	CONSTRAINT "esc_bol_fecha_chk" CHECK ((fecha_evento = ANY (ARRAY['2026-10-17'::date, '2026-10-18'::date])))
 );
 CREATE TABLE "escenarios" (
 	"id_escenario" serial,
@@ -160,3 +170,33 @@ CREATE TABLE "venta" (
 	CONSTRAINT "venta_estado_chk" CHECK (((estado)::text = ANY (ARRAY[('completada'::character varying)::text, ('anulada'::character varying)::text, ('pendiente'::character varying)::text]))),
 	CONSTRAINT "venta_total_check" CHECK ((total > (0)::numeric))
 );
+
+CREATE INDEX "idx_artista_usuario_id" ON "artista" ("usuario_id");
+CREATE INDEX "idx_asistente_usuario_id" ON "asistente" ("usuario_id");
+CREATE INDEX "idx_boleta_activas" ON "boleta" ("escenario_id","fecha_evento");
+CREATE INDEX "idx_boleta_escenario_id" ON "boleta" ("escenario_id");
+CREATE INDEX "idx_boleta_estado" ON "boleta" ("estado");
+CREATE INDEX "idx_boleta_fecha_esc_estado" ON "boleta" ("fecha_evento","escenario_id","estado");
+CREATE INDEX "idx_boleta_fecha_evento" ON "boleta" ("fecha_evento");
+CREATE INDEX "idx_boleta_tipo_boleta_id" ON "boleta" ("tipo_boleta_id");
+CREATE INDEX "idx_boleta_venta_id" ON "boleta" ("venta_id");
+CREATE INDEX "idx_contrato_activos" ON "contrato" ("artista_id");
+CREATE INDEX "idx_contrato_artista_estado" ON "contrato" ("artista_id","estado");
+CREATE INDEX "idx_contrato_artista_id" ON "contrato" ("artista_id");
+CREATE INDEX "idx_contrato_estado" ON "contrato" ("estado");
+CREATE INDEX "idx_esc_bol_fecha_evento" ON "esc_bol" ("fecha_evento");
+CREATE INDEX "idx_presentacion_escenario_id" ON "presentacion" ("escenario_id");
+CREATE INDEX "idx_presentacion_estado" ON "presentacion" ("estado");
+CREATE INDEX "idx_presentacion_fecha" ON "presentacion" ("fecha_presentacion");
+CREATE INDEX "idx_realizar_pres_artista" ON "realizar" ("presentacion_id","artista_id");
+CREATE INDEX "idx_realizar_presentacion_id" ON "realizar" ("presentacion_id");
+CREATE INDEX "idx_staff_rol_id" ON "staff" ("rol_id");
+CREATE INDEX "idx_staff_usuario_id" ON "staff" ("usuario_id");
+CREATE INDEX "idx_staff_turno_esc_fecha" ON "staff_turno" ("escenario_id","fecha_turno");
+CREATE INDEX "idx_staff_turno_escenario_id" ON "staff_turno" ("escenario_id");
+CREATE INDEX "idx_usuario_pais_codigo_iso" ON "usuario" ("pais_codigo_iso");
+CREATE INDEX "idx_venta_asistente_estado" ON "venta" ("asistente_id","estado");
+CREATE INDEX "idx_venta_asistente_id" ON "venta" ("asistente_id");
+CREATE INDEX "idx_venta_estado" ON "venta" ("estado");
+CREATE INDEX "idx_venta_metodo_pago_id" ON "venta" ("metodo_pago_id");
+ALTER TABLE "boleta" ADD CONSTRAINT "boleta_esc_bol_fk" FOREIGN KEY ("escenario_id","tipo_boleta_id","fecha_evento") REFERENCES "esc_bol"("escenario_id","tipo_boleta_id","fecha_evento");
